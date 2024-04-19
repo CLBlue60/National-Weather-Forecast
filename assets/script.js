@@ -6,7 +6,7 @@ $(document).ready(() => {
 
   // Function to fetch weather data from the One Call API
   const getWeatherOneAPI = (a, b) => {
-    const queryURL2 = `https://api.openweathermap.org/data/2.5/onecall?lat=${a}&lon=${b}&exclude=minutely,hourly&appid=aec299195260a001b09706b5bfe740f7&units=imperial`;
+    const queryURL2 = `https://api.openweathermap.org/data/2.5/onecall?lat=${a}&lon=${b}&exclude=minutely,hourly&appid=a09e97532615886e279946fa86153a71&units=imperial`;
 
     // Make AJAX request to fetch weather data
     $.ajax({
