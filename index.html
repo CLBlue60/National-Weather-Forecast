@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    />
+    <!-- Font Awesome CSS -->
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+    />
+    <!-- Google Fonts CSS -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap"
+      rel="stylesheet"
+    />
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <!-- Moment.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <title>Weather Forecast</title>
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="navbar navbar-dark bg-primary">
+      <h1 class="display-4 text-light mx-auto">Weather Dashboard</h1>
+    </header>
+    <div class="container-fluid">
+      <div class="row mt-2">
+        <!-- Sidebar Column -->
+        <aside class="col-lg-4">
+          <div class="card bg-light p-2 mb-2">
+            <!-- Search form -->
+            <h4>Enter a City Name:</h4>
+            <form class="form-inline" id="city-form">
+              <input
+                class="form-control sm-2"
+                id="city-input"
+                type="search"
+                aria-label="Search"
+              />
+              <button type="submit" class="btn btn-primary" id="form-submit">
+                <i class="fas fa-search"></i>
+              </button>
+            </form>
+            <!-- List to display search history -->
+            <ul class="list-group mt-2" id="city-list"></ul>
+          </div>
+        </aside>
+        <!-- Main Column for Weather Display -->
+        <div class="col-lg-8">
+          <!-- Placeholder for current weather data -->
+          <section class="card p-2" id="current" style="display: none">
+            <h1 id="city"></h1>
+            <h5 id="date"></h5>
+            <p id="temp"></p>
+            <p id="humidity"></p>
+            <p id="wind"></p>
+            <p id="uv-index">UV Index: <span class="color"></span></p>
+          </section>
+          <!-- Placeholder for 5-day forecast -->
+          <section class="mt-2 mb-2" id="five-day" style="display: none">
+            <h3>5-Day Forecast:</h3>
+            <!-- Cards for 5-day forecast -->
+            <div class="card-deck"></div>
+          </section>
+        </div>
+      </div>
+    </div>
+    <!-- JavaScript file -->
+    <script src="assets\script.js"></script>
+  </body>
+</html>
+
+let apiKey = 'a09e97532615886e279946fa86153a71'; let apiURL =
+'https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=imperial';
