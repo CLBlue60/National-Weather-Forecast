@@ -14,6 +14,6 @@ To enhance user experience, the application stores the last searched city in loc
 
 In case of an unsuccessful API call, an error message prompts users to retry their search with a valid city name. Additionally, any corresponding city buttons associated with unsuccessful searches are automatically removed.
 
-
+application url : https://clblue60.github.io/National-Weather-Forecast/
 
 ![FireShot Capture 009 - Weather Forecast - 127 0 0 1](https://github.com/CLBlue60/National-Weather-Forecast/assets/163502624/4ec42f30-570d-4292-89f1-b5c8888bc1eb)
