@@ -6,7 +6,7 @@ $(document).ready(() => {
 
   // Function to fetch weather data from the One Call API
   const getWeatherOneAPI = (a, b) => {
-    const queryURL2 = `https://api.openweathermap.org/data/2.5/onecall?lat=${a}&lon=${b}&exclude=minutely,hourly&appid=a09e97532615886e279946fa86153a71&units=imperial`;
+    const queryURL2 = `https://api.openweathermap.org/data/3.0/onecall?lat=${a}&lon=${b}&exclude=minutely,hourly&appid=06fc5f61017af3e8161a067f5acf0c96&units=imperial`;
 
     // Make AJAX request to fetch weather data
     $.ajax({
@@ -71,7 +71,7 @@ $(document).ready(() => {
 
   // Function to fetch current weather data
   const getWeather = () => {
-    const queryURL = `https://api.openweathermap.org/data/2.5/weather?q=${cityName}&lang=en&appid=a09e97532615886e279946fa86153a71`;
+    const queryURL = `https://api.openweathermap.org/data/2.5/weather?q=${cityName}&lang=en&appid=06fc5f61017af3e8161a067f5acf0c96`;
 
     // Make AJAX request to fetch current weather data
     $.ajax({
